@@ -35,11 +35,11 @@ The dataset used is `sample_orders.csv`, which includes the following columns:
      amount DECIMAL(10,2)
    );
 
-2. **Imported the Dataset**
+2. **Imported the Dataset**<br>
    --Used Table Data Import Wizard in MySQL Workbench
    --Loaded sample_orders.csv into the orders table
    
-3. **Analyzed Monthly Sales Trends**
+3. **Analyzed Monthly Sales Trends**<br>
    --Grouped data by year and month
    --Calculated total revenue and distinct order volume
 
