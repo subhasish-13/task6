@@ -36,34 +36,34 @@ The dataset used is `sample_orders.csv`, which includes the following columns:
    );
 
 2. **Imported the Dataset**<br>
-   --Used Table Data Import Wizard in MySQL Workbench
-   --Loaded sample_orders.csv into the orders table
+   - Used Table Data Import Wizard in MySQL Workbench
+   - Loaded sample_orders.csv into the orders table
    
 3. **Analyzed Monthly Sales Trends**<br>
-   --Grouped data by year and month
-   --Calculated total revenue and distinct order volume
+   - Grouped data by year and month
+   - Calculated total revenue and distinct order volume
 
    ```sql
-SELECT
-  YEAR(order_date) AS year,
-  MONTH(order_date) AS month,
-  SUM(amount) AS total_revenue,
-  COUNT(DISTINCT order_id) AS order_volume
-FROM orders
-GROUP BY year, month
-ORDER BY year, month;
+   SELECT
+     YEAR(order_date) AS year,
+     MONTH(order_date) AS month,
+     SUM(amount) AS total_revenue,
+     COUNT(DISTINCT order_id) AS order_volume
+   FROM orders
+   GROUP BY year, month
+   ORDER BY year, month;
 
 4. **Identified Top 3 Months by Revenue**
    ```sql
-SELECT
-  YEAR(order_date) AS year,
-  MONTH(order_date) AS month,
-  SUM(amount) AS total_revenue,
-  COUNT(DISTINCT order_id) AS order_volume
-FROM orders
-GROUP BY year, month
-ORDER BY total_revenue DESC
-LIMIT 3;
+   SELECT
+      YEAR(order_date) AS year,
+      MONTH(order_date) AS month,
+      SUM(amount) AS total_revenue,
+      COUNT(DISTINCT order_id) AS order_volume
+   FROM orders
+   GROUP BY year, month
+   ORDER BY total_revenue DESC
+   LIMIT 3;
 
 ## Files Included
 - `task6_sales_analysis.sql` – SQL script with table creation and analysis queries
